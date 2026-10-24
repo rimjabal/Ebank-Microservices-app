@@ -1,4 +1,4 @@
-package ecommsapp.ebankservice.repositories;
+package ecommsapp.ebankservice.repository;
 
 import ecommsapp.ebankservice.entities.BankAccount;
 import org.springframework.data.jpa.repository.JpaRepository;

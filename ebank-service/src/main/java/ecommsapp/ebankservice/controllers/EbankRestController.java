@@ -1,6 +1,6 @@
 package ecommsapp.ebankservice.controllers;
 
-import ecommsapp.ebankservice.clients.CustomerRestClient;
+import ecommsapp.ebankservice.feign.CustomerRestClient;
 import ecommsapp.ebankservice.entities.BankAccount;
 import ecommsapp.ebankservice.model.Customer;
 import ecommsapp.ebankservice.repository.BankAccountRepository;
@@ -9,12 +9,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin("*")
-public class EbankController {
+public class EbankRestController {
     private final BankAccountRepository bankAccountRepository;
     private final CustomerRestClient customerRestClient;
 
-    public EbankController(BankAccountRepository bankAccountRepository, CustomerRestClient customerRestClient) {
+    public EbankRestController(BankAccountRepository bankAccountRepository, CustomerRestClient customerRestClient) {
         this.bankAccountRepository = bankAccountRepository;
         this.customerRestClient = customerRestClient;
     }

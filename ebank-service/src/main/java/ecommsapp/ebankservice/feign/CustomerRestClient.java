@@ -1,4 +1,4 @@
-package ecommsapp.ebankservice.clients;
+package ecommsapp.ebankservice.feign;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import ecommsapp.ebankservice.model.Customer;
