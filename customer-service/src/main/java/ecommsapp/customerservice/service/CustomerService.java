@@ -1,33 +1,35 @@
 package ecommsapp.customerservice.service;
 
 import ecommsapp.customerservice.entities.Customer;
-import ecommsapp.customerservice.repositories.CustomerRepository;
+import ecommsapp.customerservice.repository.CustomerRepository;
+import org.springframework.ai.mcp.annotation.McpTool;
+import org.springframework.ai.mcp.annotation.McpToolParam;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+@Service
 
-@RestController
-@CrossOrigin("*")
-public class CustomerController {
+public class CustomerService {
     private final CustomerRepository customerRepository;
 
-    public CustomerController(CustomerRepository customerRepository) {
+    public CustomerService(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
 
-    @GetMapping("/customers")
+@McpTool(description = "Get all Customers")
     public List<Customer> getAllCustomers() {
         return customerRepository.findAll();
     }
-
-    @GetMapping("/customers/{id}")
-    public Customer getCustomerById(@PathVariable Long id) {
+@McpTool(description = "Find a customer by id")
+    public Customer findCustomerById(@McpToolParam(description = "The customer id") Long id) {
         return customerRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Customer not found"));
     }
+    @McpTool(description = "Save a new customer")
 
-    @PostMapping("/customers")
-    public Customer saveCustomer(@RequestBody Customer customer) {
+    public Customer saveCustomer(@McpToolParam(description = "The Customer to save (name)") Customer customer) {
         return customerRepository.save(customer);
     }
+
 }

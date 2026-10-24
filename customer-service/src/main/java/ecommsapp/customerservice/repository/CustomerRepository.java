@@ -1,4 +1,4 @@
-package ecommsapp.customerservice.repositories;
+package ecommsapp.customerservice.repository;
 
 import ecommsapp.customerservice.entities.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
