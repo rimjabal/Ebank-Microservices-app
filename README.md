@@ -86,6 +86,7 @@ Request flow:
 | Vitest | unit tests |
 
 **Integrations:** Telegram long-polling bot, Discord bot, OpenAI `gpt-4o`.
+<img width="1130" height="836" alt="Capture d&#39;écran 2026-11-24 145815" src="https://github.com/user-attachments/assets/9b9e5c44-00ee-49da-acff-0373342f4dff" />
 
 ---
 
@@ -375,3 +376,6 @@ The project was built commit by commit:
 | `8d11de0` | Add API gateway with discovery routing and CORS |
 | `403003f` | Add AI chatbot with Telegram and Discord integrations |
 | `0d3487d` | Add Angular application with accounts and bot UI |
+
+<img width="1130" height="836" alt="Capture d&#39;écran 2026-11-24 145815" src="https://github.com/user-attachments/assets/0a074682-3f80-440a-b24b-d119a72693ad" />
+
